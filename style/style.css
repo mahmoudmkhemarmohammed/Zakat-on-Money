@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --main-back : #012c33;
+    --second-back : #023c45;
+    --main-color : #FFF;
+}
+body.light {
+    --main-back : #b9d1d7;
+    --second-back : #FFF;
+    --main-color : black;
+}
+body {
+    background-color: var(--main-back);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.container {
+    width: 700px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: var(--second-back);
+    padding: 20px;
+    position: relative;
+    transition: .3s;
+}
+.container h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.container h2 .type-writer {
+    font-size: 40px;
+    color: #00ddff;
+    animation: writer .5s infinite linear alternate;
+}
+@keyframes writer {
+    0% , 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+.container .inputs {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .inputs input {
+    padding: 10px;
+    font-size: 30px;
+    width: 70%;
+    height: 55px;
+    border: none;
+    outline: none;
+    background-color: #00ddff;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.container .inputs label {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.container .outputs {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .outputs .text {
+    color: var(--main-color);
+}
+.container .outputs span {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.container .outputs .span-content {
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    width: 70%;
+    height: 55px;
+    background-color: #00ddff;
+    border-radius: 5px;
+}
+i {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #012c33;
+    padding: 11px;
+    font-size: 30px;
+    color: #00ddff;
+    cursor: pointer;
+    padding: 10px;
+}
+i.fa-sun {
+    color: gold;
+}
